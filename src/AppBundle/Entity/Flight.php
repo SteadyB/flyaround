@@ -107,10 +107,19 @@ class Flight
     private $wasDone;
 
 
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->flight = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -134,7 +143,7 @@ class Flight
     /**
      * Get nbFreeSeats
      *
-     * @return int
+     * @return integer
      */
     public function getNbFreeSeats()
     {
@@ -254,35 +263,11 @@ class Flight
     /**
      * Get wasDone
      *
-     * @return bool
+     * @return boolean
      */
     public function getWasDone()
     {
         return $this->wasDone;
-    }
-
-    /**
-     * Set departure
-     *
-     * @param \AppBundle\Entity\Site $departure
-     *
-     * @return Flight
-     */
-    public function setDeparture(\AppBundle\Entity\Site $departure)
-    {
-        $this->departure = $departure;
-
-        return $this;
-    }
-
-    /**
-     * Get departure
-     *
-     * @return \AppBundle\Entity\Site
-     */
-    public function getDeparture()
-    {
-        return $this->departure;
     }
 
     /**
@@ -312,11 +297,11 @@ class Flight
     /**
      * Set plane
      *
-     * @param \AppBundle\Entity\Site $plane
+     * @param \AppBundle\Entity\PlaneModel $plane
      *
      * @return Flight
      */
-    public function setPlane(\AppBundle\Entity\Site $plane)
+    public function setPlane(\AppBundle\Entity\PlaneModel $plane)
     {
         $this->plane = $plane;
 
@@ -326,7 +311,7 @@ class Flight
     /**
      * Get plane
      *
-     * @return \AppBundle\Entity\Site
+     * @return \AppBundle\Entity\PlaneModel
      */
     public function getPlane()
     {
@@ -355,13 +340,6 @@ class Flight
     public function getPilot()
     {
         return $this->pilot;
-    }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->flight = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -396,5 +374,29 @@ class Flight
     public function getFlight()
     {
         return $this->flight;
+    }
+
+    /**
+     * Set departure
+     *
+     * @param \AppBundle\Entity\Site $departure
+     *
+     * @return Flight
+     */
+    public function setDeparture(\AppBundle\Entity\Site $departure)
+    {
+        $this->departure = $departure;
+
+        return $this;
+    }
+
+    /**
+     * Get departure
+     *
+     * @return \AppBundle\Entity\Site
+     */
+    public function getDeparture()
+    {
+        return $this->departure;
     }
 }

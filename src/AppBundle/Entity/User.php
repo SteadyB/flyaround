@@ -92,9 +92,9 @@ class User
     private $note;
 
     /**
-     * @var int
+     * @var boolean
      *
-     * @ORM\Column(name="isACertifiedPilot", type="integer")
+     * @ORM\Column(name="isACertifiedPilot", type="boolean")
      */
     private $isACertifiedPilot;
 

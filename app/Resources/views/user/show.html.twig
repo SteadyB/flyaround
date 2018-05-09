@@ -35,7 +35,7 @@
             </tr>
             <tr>
                 <th>Isacertifiedpilot</th>
-                <td>{{ user.isACertifiedPilot }}</td>
+                <td>{% if user.isACertifiedPilot %}Yes{% else %}No{% endif %}</td>
             </tr>
         </tbody>
     </table>
