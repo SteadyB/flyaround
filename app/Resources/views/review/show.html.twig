@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>REVIEW</h1>
+    <table>
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ review.id }}</td>
+        </tr>
+        <tr>
+            <th>Author</th>
+            <td>{{ review.reviewAuthor }}</td>
+        </tr>
+        <tr>
+            <th>Date of publication</th>
+            <td>{% if review.publicationDate %}{{ review.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+        </tr>
+        <tr>
+            <th>Note</th>
+            <td>{% for i in 1..review.note%} * {% endfor %}</td>
+        </tr>
+        <tr>
+            <th>Text</th>
+            <td>{{ review.text }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('review_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('review_edit', { 'id': review.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
