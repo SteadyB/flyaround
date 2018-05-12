@@ -23,7 +23,7 @@ class Review
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="userRated")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $userRateds;
+    private $userRated;
 
 
     public function __toString()
@@ -236,30 +236,6 @@ class Review
     }
 
     /**
-     * Set userRated
-     *
-     * @param \AppBundle\Entity\User $userRated
-     *
-     * @return Review
-     */
-    public function setUserRated(\AppBundle\Entity\User $userRated)
-    {
-        $this->userRated = $userRated;
-
-        return $this;
-    }
-
-    /**
-     * Get userRated
-     *
-     * @return \AppBundle\Entity\User
-     */
-    public function getUserRated()
-    {
-        return $this->userRated;
-    }
-
-    /**
      * Set userRateds
      *
      * @param \AppBundle\Entity\User $userRateds
@@ -281,5 +257,29 @@ class Review
     public function getUserRateds()
     {
         return $this->userRateds;
+    }
+
+    /**
+     * Set userRated
+     *
+     * @param \AppBundle\Entity\User $userRated
+     *
+     * @return Review
+     */
+    public function setUserRated(\AppBundle\Entity\User $userRated)
+    {
+        $this->userRated = $userRated;
+
+        return $this;
+    }
+
+    /**
+     * Get userRated
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getUserRated()
+    {
+        return $this->userRated;
     }
 }

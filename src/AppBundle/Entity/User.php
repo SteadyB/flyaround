@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class User
 {
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Review", mappedBy="userRateds")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Review", mappedBy="userRated")
      * @ORM\JoinColumn(nullable=false)
      */
     private $userRated;
