@@ -11,7 +11,6 @@ namespace AppBundle\Controller;
 use AppBundle\Form\ReviewType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -68,7 +67,7 @@ class ReviewController extends Controller
     /**
      * Finds and displays a Review by ID.
      *
-     * @Route("/{id}", name="review_show")
+     * @Route("/review/{id}", name="review_show")
      * @Method("GET")
      * @param Review $review
      * @return \Symfony\Component\HttpFoundation\Response
