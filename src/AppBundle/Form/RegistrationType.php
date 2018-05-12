@@ -31,7 +31,6 @@ class RegistrationType extends AbstractType
             ->add('isACertifiedPilot', CheckboxType::class, ['required' => false, 'label' => 'Certified Pilot'])
             ->add('phoneNumber', TelType::class, ['attr' => ['min' => 10, 'max' => 12, 'label' => 'Phone Number']])
             ->add('birthDate', BirthdayType::class, ['placeholder' => ['year' => 'Year', 'month' => 'Month', 'day' => 'Day']])
-            ->add('creationDate', DateType::class, ['data' => new \DateTime('now')])
             //->add('creationDate', HiddenType::class, ['data' => new \DateTime('now')])
             ->add('agreeTerms', CheckboxType::class, ['mapped' => false]);
     }
