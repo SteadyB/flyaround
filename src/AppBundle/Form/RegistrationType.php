@@ -26,11 +26,11 @@ class RegistrationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('birthDate', BirthdayType::class, ['placeholder' => ['year' => 'Year', 'month' => 'Month', 'day' => 'Day']])
             ->add('firstName', TextType::class, ['attr' => ['maxlength'=> 200, 'label' => 'First Name']])
             ->add('lastName', TextType::class, ['attr' => ['maxlength'=> 250, 'label' => 'Last Name']])
             ->add('isACertifiedPilot', CheckboxType::class, ['required' => false, 'label' => 'Certified Pilot'])
             ->add('phoneNumber', TelType::class, ['attr' => ['min' => 10, 'max' => 12, 'label' => 'Phone Number']])
-            ->add('birthDate', BirthdayType::class, ['placeholder' => ['year' => 'Year', 'month' => 'Month', 'day' => 'Day']])
             //->add('creationDate', HiddenType::class, ['data' => new \DateTime('now')])
             ->add('agreeTerms', CheckboxType::class, ['mapped' => false]);
     }
