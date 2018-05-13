@@ -16,5 +16,6 @@
 /vendor/
 /web/bundles/
 *.php~
+*.log
 /node_modules
 /node_modules/*
