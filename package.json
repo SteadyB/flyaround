@@ -1,18 +1,19 @@
 {
   "name": "flyaround",
   "version": "1.0.0",
-  "description": "FLY, FLY, FLY, Flyaround ",
+  "description": "FLY, FLY, FLY, Flyaround.",
   "main": "webpack.config.js",
   "directories": {
     "test": "tests"
   },
-  "dependencies": {
-    "webpack-notifier": "^1.6.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@symfony/webpack-encore": "^0.20.1",
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.3.1",
     "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.1"
+    "sass-loader": "^7.0.1",
+    "webpack-notifier": "^1.6.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
