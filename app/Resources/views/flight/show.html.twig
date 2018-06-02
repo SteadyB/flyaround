@@ -22,6 +22,18 @@
                 <td>{% if flight.takeOffTime %}{{ flight.takeOffTime|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
             <tr>
+                <th>Flight distance</th>
+                <td>{% if distance %}{{ distance|number_format(2, ',', ' ') }}{% endif %}{{ unit }}</td>
+            </tr>
+            <tr>
+                <th>Flight Time</th>
+                <td>{% if flightTime %}{{ flightTime|number_format(0) }}{% endif %}
+                    {% if flightTime < 1 %} minutes
+                    {% elseif flightTime < 2 %}hour
+                    {% else %} hours
+                    {% endif %}</td>
+            </tr>
+            <tr>
                 <th>Publicationdate</th>
                 <td>{% if flight.publicationDate %}{{ flight.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
